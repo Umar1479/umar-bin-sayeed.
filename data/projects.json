@@ -1,0 +1,592 @@
+[
+ {
+  "id": "01",
+  "name": "Café Boulud, Four Seasons",
+  "sector": "Restaurants & retail",
+  "scope": [
+   "Civil",
+   "MEP",
+   "Fit-out",
+   "Design development"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "01-cafe-boulud-four-seasons-4.webp",
+   "01-cafe-boulud-four-seasons-5.webp",
+   "01-cafe-boulud-four-seasons-6.webp",
+   "01-cafe-boulud-four-seasons-1.webp",
+   "01-cafe-boulud-four-seasons-2.webp",
+   "01-cafe-boulud-four-seasons-3.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "02",
+  "name": "Al Mamlaka Social Dining",
+  "sector": "Restaurants & retail",
+  "scope": [
+   "Fit-out",
+   "MEP",
+   "Design development"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "02-al-mamlaka-social-dining-1.webp",
+   "02-al-mamlaka-social-dining-2.webp",
+   "02-al-mamlaka-social-dining-3.webp",
+   "02-al-mamlaka-social-dining-4.webp",
+   "02-al-mamlaka-social-dining-5.webp",
+   "02-al-mamlaka-social-dining-6.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "03",
+  "name": "Loqma at Four Seasons",
+  "sector": "Restaurants & retail",
+  "scope": [
+   "Fit-out",
+   "MEP",
+   "Design development"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "03-loqma-at-four-seasons-1.webp",
+   "03-loqma-at-four-seasons-2.webp",
+   "03-loqma-at-four-seasons-3.webp",
+   "03-loqma-at-four-seasons-4.webp",
+   "03-loqma-at-four-seasons-5.webp",
+   "03-loqma-at-four-seasons-6.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "04",
+  "name": "Okku",
+  "sector": "Restaurants & retail",
+  "scope": [
+   "Fit-out",
+   "MEP"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "04-okku-1.webp",
+   "04-okku-3.webp",
+   "04-okku-4.webp",
+   "04-okku-5.webp",
+   "04-okku-6.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "05",
+  "name": "Patchi, U-Walk",
+  "sector": "Restaurants & retail",
+  "scope": [
+   "Fit-out",
+   "MEP"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "05-patchi-u-walk-1.webp",
+   "05-patchi-u-walk-2.webp",
+   "05-patchi-u-walk-3.webp",
+   "05-patchi-u-walk-4.webp",
+   "05-patchi-u-walk-5.webp",
+   "05-patchi-u-walk-6.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "06",
+  "name": "Patchi, Nakheel Mall",
+  "sector": "Restaurants & retail",
+  "scope": [
+   "Fit-out",
+   "MEP"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "06-patchi-nakheel-mall-1.webp",
+   "06-patchi-nakheel-mall-2.webp",
+   "06-patchi-nakheel-mall-3.webp",
+   "06-patchi-nakheel-mall-4.webp",
+   "06-patchi-nakheel-mall-5.webp",
+   "06-patchi-nakheel-mall-6.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "07",
+  "name": "Patchi, Villaggio",
+  "sector": "Restaurants & retail",
+  "scope": [
+   "Fit-out",
+   "MEP"
+  ],
+  "location": "Khobar",
+  "photos": [
+   "07-patchi-vilaggio-1.webp",
+   "07-patchi-vilaggio-3.webp",
+   "07-patchi-vilaggio-4.webp",
+   "07-patchi-vilaggio-5.webp",
+   "07-patchi-vilaggio-6.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "08",
+  "name": "Patchi, Yanbu",
+  "sector": "Restaurants & retail",
+  "scope": [
+   "Fit-out",
+   "MEP"
+  ],
+  "location": "Yanbu",
+  "photos": [
+   "08-patchi-yonbu-1.webp",
+   "08-patchi-yonbu-2.webp",
+   "08-patchi-yonbu-3.webp",
+   "08-patchi-yonbu-4.webp",
+   "08-patchi-yonbu-5.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "09",
+  "name": "Patchi, Solitaire Mall",
+  "sector": "Restaurants & retail",
+  "scope": [
+   "Fit-out",
+   "MEP"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "09-patchi-solitaire-mall-1.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "10",
+  "name": "Zafaran",
+  "sector": "Restaurants & retail",
+  "scope": [
+   "Fit-out",
+   "MEP"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "10-zafaran-1.webp",
+   "10-zafaran-2.webp",
+   "10-zafaran-3.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "11",
+  "name": "Illy Café",
+  "sector": "Restaurants & retail",
+  "scope": [
+   "Civil",
+   "Fit-out",
+   "MEP",
+   "Design development"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "11-illy-cafe-1.webp",
+   "11-illy-cafe-2.webp",
+   "11-illy-cafe-3.webp",
+   "11-illy-cafe-4.webp",
+   "11-illy-cafe-5.webp",
+   "11-illy-cafe-6.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "12",
+  "name": "Alimenti",
+  "sector": "Restaurants & retail",
+  "scope": [
+   "Fit-out",
+   "MEP",
+   "Design development"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "12-alimenti-1.webp",
+   "12-alimenti-2.webp",
+   "12-alimenti-3.webp",
+   "12-alimenti-4.webp",
+   "12-alimenti-5.webp",
+   "12-alimenti-6.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "14",
+  "name": "L’Éclair de Génie",
+  "sector": "Restaurants & retail",
+  "scope": [
+   "Fit-out",
+   "MEP",
+   "Design development"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "14-l-eclair-de-genie-1.webp",
+   "14-l-eclair-de-genie-2.webp",
+   "14-l-eclair-de-genie-3.webp",
+   "14-l-eclair-de-genie-4.webp",
+   "14-l-eclair-de-genie-5.webp",
+   "14-l-eclair-de-genie-6.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "15",
+  "name": "Toqa",
+  "sector": "Restaurants & retail",
+  "scope": [
+   "Fit-out",
+   "MEP"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "15-toqa-1.webp",
+   "15-toqa-2.webp",
+   "15-toqa-3.webp",
+   "15-toqa-4.webp",
+   "15-toqa-5.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "16",
+  "name": "Tayba",
+  "sector": "Restaurants & retail",
+  "scope": [
+   "Fit-out",
+   "MEP",
+   "Design development"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "16-tayba-1.webp",
+   "16-tayba-2.webp",
+   "16-tayba-3.webp",
+   "16-tayba-4.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "17",
+  "name": "PepsiCo",
+  "sector": "Offices",
+  "scope": [
+   "Fit-out",
+   "MEP",
+   "Design development"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "17-pepsico-1.webp",
+   "17-pepsico-2.webp",
+   "17-pepsico-3.webp",
+   "17-pepsico-4.webp",
+   "17-pepsico-5.webp",
+   "17-pepsico-6.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "18",
+  "name": "Saudi Cup Media Center",
+  "sector": "Offices",
+  "scope": [
+   "Civil",
+   "MEP",
+   "Fit-out",
+   "Design development"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "18-saudi-cup-media-center-1.webp",
+   "18-saudi-cup-media-center-2.webp",
+   "18-saudi-cup-media-center-3.webp",
+   "18-saudi-cup-media-center-4.webp",
+   "18-saudi-cup-media-center-5.webp",
+   "18-saudi-cup-media-center-6.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "19",
+  "name": "Rimadesio",
+  "sector": "Offices",
+  "scope": [
+   "Fit-out",
+   "MEP"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "19-rimadesio-1.webp",
+   "19-rimadesio-2.webp",
+   "19-rimadesio-3.webp",
+   "19-rimadesio-4.webp",
+   "19-rimadesio-5.webp",
+   "19-rimadesio-6.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "20",
+  "name": "D Offices",
+  "sector": "Offices",
+  "scope": [
+   "Fit-out",
+   "MEP",
+   "Design development"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "20-d-offices-1.webp",
+   "20-d-offices-2.webp",
+   "20-d-offices-3.webp",
+   "20-d-offices-4.webp",
+   "20-d-offices-5.webp",
+   "20-d-offices-6.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "22",
+  "name": "Taqnia",
+  "sector": "Offices",
+  "scope": [
+   "Fit-out",
+   "MEP"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "22-taqnia-1.webp",
+   "22-taqnia-2.webp",
+   "22-taqnia-3.webp",
+   "22-taqnia-4.webp",
+   "22-taqnia-5.webp",
+   "22-taqnia-6.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "23",
+  "name": "Salasa Offices",
+  "sector": "Offices",
+  "scope": [
+   "Fit-out",
+   "MEP",
+   "Design development"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "23-salasa-offices-1.webp",
+   "23-salasa-offices-2.webp",
+   "23-salasa-offices-3.webp",
+   "23-salasa-offices-4.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "24",
+  "name": "Salasa Warehouses",
+  "sector": "Warehouses",
+  "scope": [
+   "Fit-out",
+   "MEP",
+   "Design development"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "24-salasa-warehouses-1.webp",
+   "24-salasa-warehouses-2.webp",
+   "24-salasa-warehouses-3.webp",
+   "24-salasa-warehouses-4.webp",
+   "24-salasa-warehouses-5.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "25",
+  "name": "Aramex",
+  "sector": "Warehouses",
+  "scope": [
+   "Fit-out",
+   "MEP",
+   "Design development"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "25-aramex-1.webp",
+   "25-aramex-2.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "26",
+  "name": "Evic",
+  "sector": "Warehouses",
+  "scope": [
+   "Fit-out",
+   "MEP",
+   "Design development"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "26-evic-1.webp",
+   "26-evic-2.webp",
+   "26-evic-3.webp",
+   "26-evic-4.webp",
+   "26-evic-5.webp",
+   "26-evic-6.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "27",
+  "name": "FEI World Cup",
+  "sector": "Events",
+  "scope": [
+   "Civil",
+   "Fit-out",
+   "MEP",
+   "Design development"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "27-fei-world-cup-1.webp",
+   "27-fei-world-cup-2.webp",
+   "27-fei-world-cup-3.webp",
+   "27-fei-world-cup-4.webp",
+   "27-fei-world-cup-5.webp",
+   "27-fei-world-cup-6.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "28",
+  "name": "NEOM",
+  "sector": "Giga-project",
+  "scope": [
+   "Civil",
+   "Fit-out",
+   "MEP",
+   "Design development"
+  ],
+  "location": "NEOM",
+  "photos": [
+   "28-neom-1.webp",
+   "28-neom-2.webp",
+   "28-neom-3.webp",
+   "28-neom-4.webp",
+   "28-neom-5.webp",
+   "28-neom-6.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "33",
+  "name": "MOI",
+  "sector": "Public sector",
+  "scope": [
+   "MEP",
+   "Finishing"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "33-moi-1.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "34",
+  "name": "MOI 2",
+  "sector": "Public sector",
+  "scope": [
+   "MEP"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "34-moi-2-1.webp",
+   "34-moi-2-2.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "35",
+  "name": "MBA",
+  "sector": "Public sector",
+  "scope": [
+   "MEP",
+   "Finishing"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "35-mba-1.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "39",
+  "name": "Kap One",
+  "sector": "Public sector",
+  "scope": [
+   "Electrical",
+   "Finishing (partial)"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "39-kap-one-1.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "40",
+  "name": "Taawuniya",
+  "sector": "Public sector",
+  "scope": [
+   "Data center"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "40-taawuniya-1.webp",
+   "40-taawuniya-2.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "41",
+  "name": "Amana",
+  "sector": "Public sector",
+  "scope": [
+   "Data center"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "41-amana-1.webp"
+  ],
+  "role": true
+ },
+ {
+  "id": "42",
+  "name": "King Saud University",
+  "sector": "Public sector",
+  "scope": [
+   "BMS (partial)"
+  ],
+  "location": "Riyadh",
+  "photos": [
+   "42-king-saud-university-1.webp"
+  ],
+  "role": true
+ }
+]
