@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://umar-bin-sayeed.vercel.app/sitemap.xml
