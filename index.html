@@ -20,6 +20,9 @@
 <meta name="twitter:description" content="How Motive's Lead Planning &amp; Project Control Engineer protects your programme.">
 <meta name="twitter:image" content="https://umar-bin-sayeed.vercel.app/assets/og-image.jpg">
 <link rel="icon" href="assets/motive-logo-sm.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap">
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Umar Bin Sayeed","jobTitle":"Lead Planning & Project Control Engineer","worksFor":{"@type":"Organization","name":"Motive International Contracting Company","url":"https://motiveint.com"},"address":{"@type":"PostalAddress","addressLocality":"Riyadh","addressCountry":"SA"},"sameAs":["https://linkedin.com/in/umar-bin-sayeed-9090ab2aa"]}
@@ -31,7 +34,8 @@
 <header class="site-head">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Motive International, back to top"><img src="assets/motive-logo-sm.png" width="50" height="42" alt="Motive"><span>Motive International</span></a>
-    <nav class="nav" aria-label="Page sections">
+    <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="nav" id="site-nav" aria-label="Page sections">
       <a href="#career">Career</a><a href="#method">Method</a><a href="#deliverables">Deliverables</a><a href="#dashboard">Dashboard</a><a href="#projects">Projects</a><a href="#ai">AI Copilot</a><a href="#contact">Contact</a>
     </nav>
   </div>
@@ -51,9 +55,9 @@
   <div class="hero-shade"></div>
   <div class="wrap hero-grid">
     <div>
-      <p class="eyebrow">Motive International Contracting Company · Riyadh</p>
+      <p class="eyebrow">Motive International Contracting Company, Riyadh</p>
       <h1>Umar Bin Sayeed</h1>
-      <p class="lead" style="font-weight:600;color:#fff;margin-bottom:.4em">Lead Planning &amp; Project Control Engineer</p>
+      <p class="role-line">Lead Planning &amp; Project Control Engineer</p>
       <p class="lead">I plan, monitor and report on Motive's projects. You see your programme clearly. Delays are raised early and dealt with on the record.</p>
       <p class="ctx">Motive is an integrated engineering and contracting firm in Riyadh. Engineering, civil, MEP, fit-out, joinery and maintenance, under one roof since 2008.</p>
       <div class="btn-row">
@@ -84,17 +88,16 @@
 <section id="career">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Career programme</p>
       <h2>My career, shown the way I show yours</h2>
       <p class="lead">One bar per role. Milestones for key results. A data date at today.</p>
     </div>
     <div class="gantt-box" id="gantt"></div>
     <div class="gantt-detail" id="gantt-detail" aria-live="polite"><b>Select a role or a result</b> on the chart to see what I did there.</div>
     <p class="gantt-legend">
-      <span><i style="background:#1A7C8F"></i>Completed role</span>
-      <span><i style="background:#C8A24A"></i>Current role: Motive</span>
-      <span><i style="background:#C8A24A"></i>Milestone (CV date)</span>
-      <span><i style="background:#fff;border:2px solid #8a6d1f"></i>Result (date not stated)</span>
+      <span><i class="sw-done"></i>Completed role</span>
+      <span><i class="sw-now"></i>Current role: Motive</span>
+      <span><i class="sw-now"></i>Milestone (CV date)</span>
+      <span><i class="sw-res"></i>Result (date not stated)</span>
     </p>
     <ol class="role-list key" aria-label="Key results at Motive, numbered as on the chart">
       <li class="res"><b>1.</b> 185+ days of EOT secured across 5 claims.</li>
@@ -102,7 +105,7 @@
       <li class="res"><b>3.</b> 100% on-time record on tender programmes.</li>
       <li class="res"><b>4.</b> Executive dashboards and KPI reporting introduced.</li>
     </ol>
-    <ol class="role-list" aria-label="Career roles" style="margin-top:14px">
+    <ol class="role-list spaced" aria-label="Career roles">
       <li class="now"><b>Lead Planning &amp; Project Control Engineer</b>, Motive International Contracting Co., Riyadh. Jan 2024 to present. Leads planning and controls on up to 4 concurrent projects.</li>
       <li><b>Planning Engineer</b>, Al-Fouzan Trading &amp; General Contracting Co., Riyadh. Jan 2023 to Dec 2023.</li>
       <li><b>Planning Engineer</b>, Lakshmi Builders &amp; Developers, Bangalore. Apr 2021 to Dec 2022.</li>
@@ -115,9 +118,8 @@
 <section id="method" class="alt">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">How I protect your programme</p>
-      <h2>Four steps. One answer to each worry.</h2>
-      <p class="lead">Clients tell us the same things. Handover dates slip. Trades are not coordinated. Progress is hard to see. Approvals hold the work. My method answers each one.</p>
+      <h2>How I protect your programme</h2>
+      <p class="lead">Four steps, one answer to each worry. Clients tell us the same things. Handover dates slip. Trades are not coordinated. Progress is hard to see. Approvals hold the work. My method answers each one.</p>
     </div>
     <div class="grid g4">
       <div class="card step"><span class="n">1</span><h3>Plan</h3><p class="worry">Worry: delays</p>
@@ -140,10 +142,9 @@
 <section id="deliverables">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">What you receive from me</p>
       <h2>Six deliverables you can use</h2>
     </div>
-    <div class="grid g3">
+    <div class="grid deliv-grid">
       <div class="card deliv"><span class="tag">Weekly</span><h3>Progress report</h3><p>Planned against actual, the critical path, top delayed activities, risks and recovery actions.</p></div>
       <div class="card deliv"><span class="tag">Weekly</span><h3>Look-ahead</h3><p>The next two to three weeks: activities, predecessors, approvals and resources that need action.</p></div>
       <div class="card deliv"><span class="tag">At start</span><h3>Cost- and resource-loaded baseline</h3><p>An approved Primavera P6 programme for manpower planning and cash-flow forecasting.</p></div>
@@ -158,12 +159,11 @@
 <section id="dashboard" class="alt">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Sample dashboard</p>
       <h2>What a weekly view looks like</h2>
       <p class="lead">A simple example of the KPI strip, S-curve and milestones in my reports.</p>
     </div>
     <div class="dash" role="group" aria-label="Sample dashboard with illustrative data">
-      <span class="sample-flag">Sample data · Illustrative only · Not a real project</span>
+      <span class="sample-flag">Sample data. Illustrative only. Not a real project.</span>
       <div class="kpis">
         <div class="kpi"><span>Planned</span><b id="k-plan">–</b></div>
         <div class="kpi"><span>Actual</span><b id="k-act">–</b></div>
@@ -173,12 +173,12 @@
       </div>
       <div class="dash-grid">
         <div>
-          <p class="g-small" style="margin:0 0 6px"><b>S-curve</b> · planned (teal), actual (red), forecast (dashed)</p>
+          <p class="chart-title"><b>S-curve:</b> planned (teal), actual (red), forecast (dashed)</p>
           <div id="scurve" class="sc-wrap"></div>
           <p class="sc-read g-small" id="sc-read" aria-live="polite">Hover, tap or use the arrow keys on the chart to read each week. Sample data.</p>
         </div>
         <div>
-          <p class="g-small" style="margin:0 0 6px"><b>Key milestones</b> · baseline week vs forecast week</p>
+          <p class="chart-title"><b>Key milestones:</b> baseline week vs forecast week</p>
           <table>
             <thead><tr><th>Milestone</th><th>Base</th><th>Fcst</th><th>Status</th></tr></thead>
             <tbody>
@@ -232,8 +232,7 @@
 <section id="projects">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Projects I have supported at Motive</p>
-      <h2>Motive's work in the Kingdom</h2>
+      <h2>Projects I have supported at Motive</h2>
       <p class="lead">Select a project to see its photos, Motive's scope and how I plan and control a project like it.</p>
     </div>
         <div class="where">
@@ -247,7 +246,7 @@
         <h3>Where the projects are</h3>
         <p>Select a city to filter the projects below. Cities are those named in the Company Profile.</p>
         <div class="city-list" id="city-list"></div>
-        <p class="proj-stat"><b data-count-total>0</b> projects shown · <b data-count-cities>0</b> cities</p>
+        <p class="proj-stat"><b data-count-total>0</b> projects shown in <b data-count-cities>0</b> cities</p>
       </div>
     </div>
     <div class="chips" role="group" aria-label="Filter projects by sector">
@@ -266,201 +265,201 @@
 <button type="button" class="proj" data-id="01" data-sector="Restaurants &amp; retail" aria-haspopup="dialog" aria-label="Open Café Boulud, Four Seasons: 6 photos">
   <span class="ph-wrap"><img src="assets/projects/01-cafe-boulud-four-seasons-4.webp" width="1600" height="1080" loading="lazy" alt="Café Boulud, Four Seasons: project photograph"><span class="count">6 photos</span></span>
   <span class="b"><span class="sector">Restaurants &amp; retail</span><span class="t">Café Boulud, Four Seasons</span>
-  <span class="scope">Civil · MEP · Fit-out · Design development · Riyadh</span>
+  <span class="scope">Civil, MEP, Fit-out, Design development. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="02" data-sector="Restaurants &amp; retail" aria-haspopup="dialog" aria-label="Open Al Mamlaka Social Dining: 6 photos">
   <span class="ph-wrap"><img src="assets/projects/02-al-mamlaka-social-dining-1.webp" width="1600" height="1067" loading="lazy" alt="Al Mamlaka Social Dining: project photograph"><span class="count">6 photos</span></span>
   <span class="b"><span class="sector">Restaurants &amp; retail</span><span class="t">Al Mamlaka Social Dining</span>
-  <span class="scope">Fit-out · MEP · Design development · Riyadh</span>
+  <span class="scope">Fit-out, MEP, Design development. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="03" data-sector="Restaurants &amp; retail" aria-haspopup="dialog" aria-label="Open Loqma at Four Seasons: 6 photos">
   <span class="ph-wrap"><img src="assets/projects/03-loqma-at-four-seasons-1.webp" width="1600" height="1076" loading="lazy" alt="Loqma at Four Seasons: project photograph"><span class="count">6 photos</span></span>
   <span class="b"><span class="sector">Restaurants &amp; retail</span><span class="t">Loqma at Four Seasons</span>
-  <span class="scope">Fit-out · MEP · Design development · Riyadh</span>
+  <span class="scope">Fit-out, MEP, Design development. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="04" data-sector="Restaurants &amp; retail" aria-haspopup="dialog" aria-label="Open Okku: 5 photos">
   <span class="ph-wrap"><img src="assets/projects/04-okku-1.webp" width="1600" height="1075" loading="lazy" alt="Okku: project photograph"><span class="count">5 photos</span></span>
   <span class="b"><span class="sector">Restaurants &amp; retail</span><span class="t">Okku</span>
-  <span class="scope">Fit-out · MEP · Riyadh</span>
+  <span class="scope">Fit-out, MEP. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="05" data-sector="Restaurants &amp; retail" aria-haspopup="dialog" aria-label="Open Patchi, U-Walk: 6 photos">
   <span class="ph-wrap"><img src="assets/projects/05-patchi-u-walk-1.webp" width="1600" height="1006" loading="lazy" alt="Patchi, U-Walk: project photograph"><span class="count">6 photos</span></span>
   <span class="b"><span class="sector">Restaurants &amp; retail</span><span class="t">Patchi, U-Walk</span>
-  <span class="scope">Fit-out · MEP · Riyadh</span>
+  <span class="scope">Fit-out, MEP. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="06" data-sector="Restaurants &amp; retail" aria-haspopup="dialog" aria-label="Open Patchi, Nakheel Mall: 6 photos">
   <span class="ph-wrap"><img src="assets/projects/06-patchi-nakheel-mall-1.webp" width="1600" height="969" loading="lazy" alt="Patchi, Nakheel Mall: project photograph"><span class="count">6 photos</span></span>
   <span class="b"><span class="sector">Restaurants &amp; retail</span><span class="t">Patchi, Nakheel Mall</span>
-  <span class="scope">Fit-out · MEP · Riyadh</span>
+  <span class="scope">Fit-out, MEP. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="07" data-sector="Restaurants &amp; retail" aria-haspopup="dialog" aria-label="Open Patchi, Villaggio: 5 photos">
   <span class="ph-wrap"><img src="assets/projects/07-patchi-vilaggio-1.webp" width="1600" height="1074" loading="lazy" alt="Patchi, Villaggio: project photograph"><span class="count">5 photos</span></span>
   <span class="b"><span class="sector">Restaurants &amp; retail</span><span class="t">Patchi, Villaggio</span>
-  <span class="scope">Fit-out · MEP · Khobar</span>
+  <span class="scope">Fit-out, MEP. Khobar.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="08" data-sector="Restaurants &amp; retail" aria-haspopup="dialog" aria-label="Open Patchi, Yanbu: 5 photos">
   <span class="ph-wrap"><img src="assets/projects/08-patchi-yonbu-1.webp" width="1600" height="1178" loading="lazy" alt="Patchi, Yanbu: project photograph"><span class="count">5 photos</span></span>
   <span class="b"><span class="sector">Restaurants &amp; retail</span><span class="t">Patchi, Yanbu</span>
-  <span class="scope">Fit-out · MEP · Yanbu</span>
+  <span class="scope">Fit-out, MEP. Yanbu.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="09" data-sector="Restaurants &amp; retail" aria-haspopup="dialog" aria-label="Open Patchi, Solitaire Mall: 1 photo">
   <span class="ph-wrap"><img src="assets/projects/09-patchi-solitaire-mall-1.webp" width="1600" height="972" loading="lazy" alt="Patchi, Solitaire Mall: project photograph"><span class="count">1 photo</span></span>
   <span class="b"><span class="sector">Restaurants &amp; retail</span><span class="t">Patchi, Solitaire Mall</span>
-  <span class="scope">Fit-out · MEP · Riyadh</span>
+  <span class="scope">Fit-out, MEP. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="10" data-sector="Restaurants &amp; retail" aria-haspopup="dialog" aria-label="Open Zafaran: 3 photos">
   <span class="ph-wrap"><img src="assets/projects/10-zafaran-1.webp" width="1024" height="582" loading="lazy" alt="Zafaran: project photograph"><span class="count">3 photos</span></span>
   <span class="b"><span class="sector">Restaurants &amp; retail</span><span class="t">Zafaran</span>
-  <span class="scope">Fit-out · MEP · Riyadh</span>
+  <span class="scope">Fit-out, MEP. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="11" data-sector="Restaurants &amp; retail" aria-haspopup="dialog" aria-label="Open Illy Café: 6 photos">
   <span class="ph-wrap"><img src="assets/projects/11-illy-cafe-1.webp" width="1600" height="900" loading="lazy" alt="Illy Café: project photograph"><span class="count">6 photos</span></span>
   <span class="b"><span class="sector">Restaurants &amp; retail</span><span class="t">Illy Café</span>
-  <span class="scope">Civil · Fit-out · MEP · Design development · Riyadh</span>
+  <span class="scope">Civil, Fit-out, MEP, Design development. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="12" data-sector="Restaurants &amp; retail" aria-haspopup="dialog" aria-label="Open Alimenti: 6 photos">
   <span class="ph-wrap"><img src="assets/projects/12-alimenti-1.webp" width="1600" height="907" loading="lazy" alt="Alimenti: project photograph"><span class="count">6 photos</span></span>
   <span class="b"><span class="sector">Restaurants &amp; retail</span><span class="t">Alimenti</span>
-  <span class="scope">Fit-out · MEP · Design development · Riyadh</span>
+  <span class="scope">Fit-out, MEP, Design development. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="14" data-sector="Restaurants &amp; retail" aria-haspopup="dialog" aria-label="Open L’Éclair de Génie: 6 photos">
   <span class="ph-wrap"><img src="assets/projects/14-l-eclair-de-genie-1.webp" width="1600" height="902" loading="lazy" alt="L’Éclair de Génie: project photograph"><span class="count">6 photos</span></span>
   <span class="b"><span class="sector">Restaurants &amp; retail</span><span class="t">L’Éclair de Génie</span>
-  <span class="scope">Fit-out · MEP · Design development · Riyadh</span>
+  <span class="scope">Fit-out, MEP, Design development. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="15" data-sector="Restaurants &amp; retail" aria-haspopup="dialog" aria-label="Open Toqa: 5 photos">
   <span class="ph-wrap"><img src="assets/projects/15-toqa-1.webp" width="1600" height="1069" loading="lazy" alt="Toqa: project photograph"><span class="count">5 photos</span></span>
   <span class="b"><span class="sector">Restaurants &amp; retail</span><span class="t">Toqa</span>
-  <span class="scope">Fit-out · MEP · Riyadh</span>
+  <span class="scope">Fit-out, MEP. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="16" data-sector="Restaurants &amp; retail" aria-haspopup="dialog" aria-label="Open Tayba: 4 photos">
   <span class="ph-wrap"><img src="assets/projects/16-tayba-1.webp" width="1600" height="1070" loading="lazy" alt="Tayba: project photograph"><span class="count">4 photos</span></span>
   <span class="b"><span class="sector">Restaurants &amp; retail</span><span class="t">Tayba</span>
-  <span class="scope">Fit-out · MEP · Design development · Riyadh</span>
+  <span class="scope">Fit-out, MEP, Design development. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="17" data-sector="Offices" aria-haspopup="dialog" aria-label="Open PepsiCo: 6 photos">
   <span class="ph-wrap"><img src="assets/projects/17-pepsico-1.webp" width="1600" height="885" loading="lazy" alt="PepsiCo: project photograph"><span class="count">6 photos</span></span>
   <span class="b"><span class="sector">Offices</span><span class="t">PepsiCo</span>
-  <span class="scope">Fit-out · MEP · Design development · Riyadh</span>
+  <span class="scope">Fit-out, MEP, Design development. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="18" data-sector="Offices" aria-haspopup="dialog" aria-label="Open Saudi Cup Media Center: 6 photos">
   <span class="ph-wrap"><img src="assets/projects/18-saudi-cup-media-center-1.webp" width="1600" height="1070" loading="lazy" alt="Saudi Cup Media Center: project photograph"><span class="count">6 photos</span></span>
   <span class="b"><span class="sector">Offices</span><span class="t">Saudi Cup Media Center</span>
-  <span class="scope">Civil · MEP · Fit-out · Design development · Riyadh</span>
+  <span class="scope">Civil, MEP, Fit-out, Design development. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="19" data-sector="Offices" aria-haspopup="dialog" aria-label="Open Rimadesio: 6 photos">
   <span class="ph-wrap"><img src="assets/projects/19-rimadesio-1.webp" width="1600" height="1070" loading="lazy" alt="Rimadesio: project photograph"><span class="count">6 photos</span></span>
   <span class="b"><span class="sector">Offices</span><span class="t">Rimadesio</span>
-  <span class="scope">Fit-out · MEP · Riyadh</span>
+  <span class="scope">Fit-out, MEP. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="20" data-sector="Offices" aria-haspopup="dialog" aria-label="Open D Offices: 6 photos">
   <span class="ph-wrap"><img src="assets/projects/20-d-offices-1.webp" width="1600" height="969" loading="lazy" alt="D Offices: project photograph"><span class="count">6 photos</span></span>
   <span class="b"><span class="sector">Offices</span><span class="t">D Offices</span>
-  <span class="scope">Fit-out · MEP · Design development · Riyadh</span>
+  <span class="scope">Fit-out, MEP, Design development. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="22" data-sector="Offices" aria-haspopup="dialog" aria-label="Open Taqnia: 6 photos">
   <span class="ph-wrap"><img src="assets/projects/22-taqnia-1.webp" width="984" height="544" loading="lazy" alt="Taqnia: project photograph"><span class="count">6 photos</span></span>
   <span class="b"><span class="sector">Offices</span><span class="t">Taqnia</span>
-  <span class="scope">Fit-out · MEP · Riyadh</span>
+  <span class="scope">Fit-out, MEP. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="23" data-sector="Offices" aria-haspopup="dialog" aria-label="Open Salasa Offices: 4 photos">
   <span class="ph-wrap"><img src="assets/projects/23-salasa-offices-1.webp" width="1600" height="1077" loading="lazy" alt="Salasa Offices: project photograph"><span class="count">4 photos</span></span>
   <span class="b"><span class="sector">Offices</span><span class="t">Salasa Offices</span>
-  <span class="scope">Fit-out · MEP · Design development · Riyadh</span>
+  <span class="scope">Fit-out, MEP, Design development. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="24" data-sector="Warehouses" aria-haspopup="dialog" aria-label="Open Salasa Warehouses: 5 photos">
   <span class="ph-wrap"><img src="assets/projects/24-salasa-warehouses-1.webp" width="1600" height="928" loading="lazy" alt="Salasa Warehouses: project photograph"><span class="count">5 photos</span></span>
   <span class="b"><span class="sector">Warehouses</span><span class="t">Salasa Warehouses</span>
-  <span class="scope">Fit-out · MEP · Design development · Riyadh</span>
+  <span class="scope">Fit-out, MEP, Design development. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="25" data-sector="Warehouses" aria-haspopup="dialog" aria-label="Open Aramex: 2 photos">
   <span class="ph-wrap"><img src="assets/projects/25-aramex-1.webp" width="1600" height="1057" loading="lazy" alt="Aramex: project photograph"><span class="count">2 photos</span></span>
   <span class="b"><span class="sector">Warehouses</span><span class="t">Aramex</span>
-  <span class="scope">Fit-out · MEP · Design development · Riyadh</span>
+  <span class="scope">Fit-out, MEP, Design development. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="26" data-sector="Warehouses" aria-haspopup="dialog" aria-label="Open Evic: 6 photos">
   <span class="ph-wrap"><img src="assets/projects/26-evic-1.webp" width="1600" height="1092" loading="lazy" alt="Evic: project photograph"><span class="count">6 photos</span></span>
   <span class="b"><span class="sector">Warehouses</span><span class="t">Evic</span>
-  <span class="scope">Fit-out · MEP · Design development · Riyadh</span>
+  <span class="scope">Fit-out, MEP, Design development. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="27" data-sector="Events" aria-haspopup="dialog" aria-label="Open FEI World Cup: 6 photos">
   <span class="ph-wrap"><img src="assets/projects/27-fei-world-cup-1.webp" width="1600" height="880" loading="lazy" alt="FEI World Cup: project photograph"><span class="count">6 photos</span></span>
   <span class="b"><span class="sector">Events</span><span class="t">FEI World Cup</span>
-  <span class="scope">Civil · Fit-out · MEP · Design development · Riyadh</span>
+  <span class="scope">Civil, Fit-out, MEP, Design development. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="28" data-sector="Giga-project" aria-haspopup="dialog" aria-label="Open NEOM: 6 photos">
   <span class="ph-wrap"><img src="assets/projects/28-neom-1.webp" width="1138" height="902" loading="lazy" alt="NEOM: project photograph"><span class="count">6 photos</span></span>
   <span class="b"><span class="sector">Giga-project</span><span class="t">NEOM</span>
-  <span class="scope">Civil · Fit-out · MEP · Design development · NEOM</span>
+  <span class="scope">Civil, Fit-out, MEP, Design development. NEOM.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="33" data-sector="Public sector" aria-haspopup="dialog" aria-label="Open MOI: 1 photo">
   <span class="ph-wrap"><img src="assets/projects/33-moi-1.webp" width="792" height="628" loading="lazy" alt="MOI: project photograph"><span class="count">1 photo</span></span>
   <span class="b"><span class="sector">Public sector</span><span class="t">MOI</span>
-  <span class="scope">MEP · Finishing · Riyadh</span>
+  <span class="scope">MEP, Finishing. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="34" data-sector="Public sector" aria-haspopup="dialog" aria-label="Open MOI 2: 2 photos">
   <span class="ph-wrap"><img src="assets/projects/34-moi-2-1.webp" width="924" height="734" loading="lazy" alt="MOI 2: project photograph"><span class="count">2 photos</span></span>
   <span class="b"><span class="sector">Public sector</span><span class="t">MOI 2</span>
-  <span class="scope">MEP · Riyadh</span>
+  <span class="scope">MEP. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="35" data-sector="Public sector" aria-haspopup="dialog" aria-label="Open MBA: 1 photo">
   <span class="ph-wrap"><img src="assets/projects/35-mba-1.webp" width="919" height="730" loading="lazy" alt="MBA: project photograph"><span class="count">1 photo</span></span>
   <span class="b"><span class="sector">Public sector</span><span class="t">MBA</span>
-  <span class="scope">MEP · Finishing · Riyadh</span>
+  <span class="scope">MEP, Finishing. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="39" data-sector="Public sector" aria-haspopup="dialog" aria-label="Open Kap One: 1 photo">
   <span class="ph-wrap"><img src="assets/projects/39-kap-one-1.webp" width="730" height="443" loading="lazy" alt="Kap One: project photograph"><span class="count">1 photo</span></span>
   <span class="b"><span class="sector">Public sector</span><span class="t">Kap One</span>
-  <span class="scope">Electrical · Finishing (partial) · Riyadh</span>
+  <span class="scope">Electrical, Finishing (partial). Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="40" data-sector="Public sector" aria-haspopup="dialog" aria-label="Open Taawuniya: 2 photos">
   <span class="ph-wrap"><img src="assets/projects/40-taawuniya-1.webp" width="850" height="673" loading="lazy" alt="Taawuniya: project photograph"><span class="count">2 photos</span></span>
   <span class="b"><span class="sector">Public sector</span><span class="t">Taawuniya</span>
-  <span class="scope">Data center · Riyadh</span>
+  <span class="scope">Data center. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="41" data-sector="Public sector" aria-haspopup="dialog" aria-label="Open Amana: 1 photo">
   <span class="ph-wrap"><img src="assets/projects/41-amana-1.webp" width="936" height="741" loading="lazy" alt="Amana: project photograph"><span class="count">1 photo</span></span>
   <span class="b"><span class="sector">Public sector</span><span class="t">Amana</span>
-  <span class="scope">Data center · Riyadh</span>
+  <span class="scope">Data center. Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <button type="button" class="proj" data-id="42" data-sector="Public sector" aria-haspopup="dialog" aria-label="Open King Saud University: 1 photo">
   <span class="ph-wrap"><img src="assets/projects/42-king-saud-university-1.webp" width="628" height="498" loading="lazy" alt="King Saud University: project photograph"><span class="count">1 photo</span></span>
   <span class="b"><span class="sector">Public sector</span><span class="t">King Saud University</span>
-  <span class="scope">BMS (partial) · Riyadh</span>
+  <span class="scope">BMS (partial). Riyadh.</span>
   <span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>
-  <span class="more">View project →</span></span></button>
+  <span class="more">View project</span></span></button>
 <!--GALLERY:END-->
     </div>
 <!--DATA:START-->
@@ -473,8 +472,7 @@
 <section id="growth" class="alt">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Growing with Motive</p>
-      <h2>Part of an integrated delivery team</h2>
+      <h2>Growing with Motive</h2>
       <p class="lead">Motive delivers engineering, civil, MEP, fit-out, joinery and maintenance under one roof. Planning and controls hold that together.</p>
     </div>
     <div class="grid g3">
@@ -487,7 +485,7 @@
         <p>I prepare tender programmes and technical proposal content with the estimation and commercial teams. My tender programmes have an on-time record of 100%.</p>
         <p>Fast execution starts with a programme that is realistic on day one.</p></div>
     </div>
-    <div class="facts" style="margin-top:34px" role="list">
+    <div class="facts flat" role="list">
       <div class="fact" role="listitem"><b>2008</b><span>Motive established, Riyadh HQ</span></div>
       <div class="fact" role="listitem"><b>120+</b><span>completed projects in the Kingdom</span></div>
       <div class="fact" role="listitem"><b>80+</b><span>clients, recurring and new</span></div>
@@ -501,10 +499,10 @@
 <section id="trust">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Why trust me with your programme</p>
-      <h2>Records first. Opinions second.</h2>
+      <h2>Why trust me with your programme</h2>
+      <p class="lead">Records first. Opinions second.</p>
     </div>
-    <div class="grid g4">
+    <div class="grid trust-grid">
       <div class="card"><h3>Evidence</h3><p>185+ days of EOT secured across 5 claims on three Riyadh fit-out and MEP projects, backed by contemporaneous records.</p></div>
       <div class="card"><h3>Early warning</h3><p>Proactive monitoring and early notices reduced delay exposure by an estimated 15%.</p></div>
       <div class="card"><h3>Contract-aware</h3><p>I assess variations, late approvals and procurement delays against the contract and advise on entitlement.</p></div>
@@ -518,9 +516,8 @@
 <section id="ai" class="copilot">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">AI Planning Copilot</p>
-      <h2>Innovation for Motive's clients</h2>
-      <span class="status">In development · not yet in use on client projects</span>
+      <h2>AI Planning Copilot</h2>
+      <span class="status">In development, not yet in use on client projects</span>
       <p class="lead">I am building a Planning Engineer AI Copilot at Motive. It does the repetitive part of planning work. I keep the judgement and sign-off.</p>
     </div>
     <div class="grid g3">
@@ -528,7 +525,7 @@
       <div class="card"><h3>BOQ cost and resource loading</h3><p>Maps the priced BOQ to activities and loads cost and resources. Totals are reconciled to the BOQ so every update can earn value.</p></div>
       <div class="card"><h3>Tender technical submissions</h3><p>Reads the RFP, builds the compliance matrix and drafts the methodology and programme sections from Motive's own library.</p></div>
     </div>
-    <div class="card" style="margin-top:20px">
+    <div class="card rules">
       <h3>Rules it follows</h3>
       <ul><li>Code does the arithmetic. AI reads and writes.</li><li>It never invents data. Missing information goes on a gap list.</li><li>Every output keeps its source.</li><li>A person reviews and signs before any notice, EOT claim or submission.</li></ul>
     </div>
@@ -539,20 +536,19 @@
 <section id="contact" class="close">
   <div class="wrap close-grid">
     <div>
-      <p class="eyebrow" style="color:#f1dfae">Next step</p>
       <h2>Start your project with Motive</h2>
       <p class="lead">Tell us your handover date. I will show you how the programme will be planned, tracked and reported.</p>
       <div class="btn-row">
         <a class="btn gold" href="mailto:usayeed@motiveint.com?subject=Project%20enquiry%20for%20Motive">Contact me</a>
-        <a class="btn ghost" style="color:#fff;border-color:#fff" href="https://wa.me/966546475093" rel="noopener">WhatsApp</a>
-        <a class="btn ghost" style="color:#fff;border-color:#fff" href="https://linkedin.com/in/umar-bin-sayeed-9090ab2aa" rel="noopener">LinkedIn</a>
-        <a class="btn ghost" style="color:#fff;border-color:#fff" href="assets/Umar-Bin-Sayeed-CV.pdf" download>Download CV</a>
-        <a class="btn ghost" style="color:#fff;border-color:#fff" href="assets/Umar-Bin-Sayeed-Motive-Page.pdf" download>Page as PDF</a>
+        <a class="btn ghost" href="https://wa.me/966546475093" rel="noopener">WhatsApp</a>
+        <a class="btn ghost" href="https://linkedin.com/in/umar-bin-sayeed-9090ab2aa" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="assets/Umar-Bin-Sayeed-CV.pdf" download>Download CV</a>
+        <a class="btn ghost" href="assets/Umar-Bin-Sayeed-Motive-Page.pdf" download>Page as PDF</a>
       </div>
       <ul class="contact-list">
         <li>Email: <a href="mailto:usayeed@motiveint.com">usayeed@motiveint.com</a></li>
         <li>Phone / WhatsApp: <a href="tel:+966546475093">+966 54 647 5093</a></li>
-        <li>Motive International Contracting Company, Riyadh · <a href="https://motiveint.com" rel="noopener">motiveint.com</a></li>
+        <li>Motive International Contracting Company, Riyadh, <a href="https://motiveint.com" rel="noopener">motiveint.com</a></li>
       </ul>
     </div>
     <div class="qr">
@@ -581,7 +577,7 @@
       <div class="chipset" id="pd-scope" aria-label="Motive scope"></div>
       <div class="pd-me" id="pd-me">
         <img src="assets/umar.webp" width="64" height="64" alt="" loading="lazy">
-        <div><b>Umar Bin Sayeed</b><span>Lead Planning Engineer · Motive International</span><small>Planning and project controls</small></div>
+        <div><b>Umar Bin Sayeed</b><span>Lead Planning Engineer, Motive International</span><small>Planning and project controls</small></div>
       </div>
       <h3>How I plan and control a project like this</h3>
       <ol class="pd-steps" id="pd-steps"></ol>
@@ -595,7 +591,7 @@
 <footer>
   <div class="wrap">
     <img src="assets/motive-logo-sm.png" width="40" height="34" alt="Motive">
-    <p>Motive International Contracting Company · Riyadh, Saudi Arabia. Personal page of Umar Bin Sayeed, Lead Planning &amp; Project Control Engineer.</p>
+    <p>Motive International Contracting Company, Riyadh, Saudi Arabia. Personal page of Umar Bin Sayeed, Lead Planning &amp; Project Control Engineer.</p>
     <p>Sample dashboard figures are illustrative. Project names and photographs are from the Motive Company Profile. Member, Saudi Council of Engineers.</p>
   </div>
 </footer>

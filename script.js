@@ -4,7 +4,11 @@
   var NS = "http://www.w3.org/2000/svg";
   function el(name, attrs, text) {
     var n = document.createElementNS(NS, name);
-    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    for (var k in attrs) {
+      var v = attrs[k];
+      if ((k === "fill" || k === "stroke") && String(v).indexOf("var(") === 0) n.style.setProperty(k, v);
+      else n.setAttribute(k, v);
+    }
     if (text != null) n.textContent = text;
     return n;
   }
@@ -55,16 +59,16 @@
     svg.appendChild(el("desc", { id: "gantt-d" }, "Gantt chart. Planning Engineer at BCES 2019 to 2020, Lakshmi Builders 2021 to 2022, Al-Fouzan 2023, then Lead Planning and Project Control Engineer at Motive from January 2024 to the data date, shown as the current role."));
 
     // header + year grid
-    svg.appendChild(el("rect", { x: 0, y: 0, width: W, height: top - 6, fill: "#1B2A3B" }));
-    svg.appendChild(el("text", { x: 12, y: 24, fill: "#fff", "font-size": 12, "font-weight": 700, "font-family": "inherit" }, "Activity"));
+    svg.appendChild(el("rect", { x: 0, y: 0, width: W, height: top - 6, fill: "var(--ch-head)" }));
+    svg.appendChild(el("text", { x: 12, y: 24, fill: "var(--ch-head-ink)", "font-size": 12, "font-weight": 700, "font-family": "inherit" }, "Activity"));
     for (var y = 2019; y <= 2027; y++) {
       var gx = x(new Date(y, 0, 1));
-      svg.appendChild(el("line", { x1: gx, y1: top - 6, x2: gx, y2: H - 28, stroke: "#d9e1e8", "stroke-width": 1 }));
-      svg.appendChild(el("text", { x: gx + 4, y: 24, fill: "#fff", "font-size": 12, "font-family": "inherit" }, String(y)));
+      svg.appendChild(el("line", { x1: gx, y1: top - 6, x2: gx, y2: H - 28, stroke: "var(--ch-grid)", "stroke-width": 1 }));
+      svg.appendChild(el("text", { x: gx + 4, y: 24, fill: "var(--ch-head-ink)", "font-size": 12, "font-family": "inherit" }, String(y)));
     }
     // row stripes
     for (var r = 0; r < rows; r++) {
-      if (r % 2 === 0) svg.insertBefore(el("rect", { x: 0, y: top + r * rowH, width: W, height: rowH, fill: "#f4f7f9" }), svg.children[2]);
+      if (r % 2 === 0) svg.insertBefore(el("rect", { x: 0, y: top + r * rowH, width: W, height: rowH, fill: "var(--ch-stripe)" }), svg.children[2]);
     }
 
     roles.forEach(function (ro, i) {
@@ -75,8 +79,8 @@
       g.appendChild(el("text", { x: 12, y: yy + 22, class: "g-text", "font-weight": 700 }, ro.id + "  " + ro.name));
       g.appendChild(el("text", { x: 12, y: yy + 38, class: "g-small" }, ro.org.split(",")[0]));
       var bx = x(s), bw = x(ro.f ? f : dd) - bx;
-      var col = ro.now ? "#C8A24A" : "#1A7C8F";
-      var dark = ro.now ? "#8a6d1f" : "#12606f";
+      var col = ro.now ? "var(--gold)" : "var(--ch-teal)";
+      var dark = ro.now ? "var(--ch-gold-d)" : "#12606f";
       // total bar (light) then progress (dark) like P6
       g.appendChild(el("rect", { x: bx, y: yy + 12, width: (x(f) - bx), height: 24, rx: 3, fill: col, opacity: ro.now ? 0.35 : 1 }));
       g.appendChild(el("rect", { x: bx, y: yy + 12, width: bw, height: 24, rx: 3, fill: col }));
@@ -97,7 +101,7 @@
       { d: new Date(2024, 0, 1), t: "Joins Motive", side: 1 }
     ].forEach(function (m) {
       var mx = x(m.d), cy = my + 22;
-      svg.appendChild(el("path", { d: "M" + mx + " " + (cy - 9) + " l9 9 l-9 9 l-9 -9 z", fill: "#C8A24A", stroke: "#8a6d1f" }));
+      svg.appendChild(el("path", { d: "M" + mx + " " + (cy - 9) + " l9 9 l-9 9 l-9 -9 z", fill: "var(--gold)", stroke: "var(--ch-gold-d)" }));
       svg.appendChild(el("text", { x: mx + 14 * m.side, y: cy + 4, class: "g-small", "text-anchor": m.side < 0 ? "end" : "start" }, m.t));
     });
 
@@ -110,17 +114,17 @@
       var ax = mS + (mE - mS) * (i + 0.5) / 4, cy = ay + 24;
       var g = el("g", { "aria-label": "Result " + (i + 1) + ": " + txt });
       g.appendChild(el("title", {}, txt));
-      g.appendChild(el("path", { d: "M" + ax + " " + (cy - 13) + " l13 13 l-13 13 l-13 -13 z", fill: "#fff", stroke: "#8a6d1f", "stroke-width": 2 }));
-      g.appendChild(el("text", { x: ax, y: cy + 4, "text-anchor": "middle", "font-size": 12, "font-weight": 700, fill: "#1B2A3B", "font-family": "inherit" }, String(i + 1)));
+      g.appendChild(el("path", { d: "M" + ax + " " + (cy - 13) + " l13 13 l-13 13 l-13 -13 z", fill: "var(--ch-surface)", stroke: "var(--ch-ring)", "stroke-width": 2 }));
+      g.appendChild(el("text", { x: ax, y: cy + 4, "text-anchor": "middle", "font-size": 12, "font-weight": 700, fill: "var(--ch-text)", "font-family": "inherit" }, String(i + 1)));
       hit(g, function () { showDetail("Result " + (i + 1) + " at Motive", "Date not stated in the CV", [txt]); });
     });
 
     // data date
     var dx = x(dd);
-    svg.appendChild(el("line", { x1: dx, y1: top - 6, x2: dx, y2: H - 28, stroke: "#1B2A3B", "stroke-width": 2, "stroke-dasharray": "5 4" }));
+    svg.appendChild(el("line", { x1: dx, y1: top - 6, x2: dx, y2: H - 28, stroke: "var(--ch-line)", "stroke-width": 2, "stroke-dasharray": "5 4" }));
     var lbl = dd.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
-    svg.appendChild(el("rect", { x: dx - 62, y: H - 26, width: 124, height: 22, rx: 4, fill: "#1B2A3B" }));
-    svg.appendChild(el("text", { x: dx, y: H - 11, fill: "#fff", "font-size": 11, "font-weight": 700, "text-anchor": "middle", "font-family": "inherit" }, "Data date " + lbl));
+    svg.appendChild(el("rect", { x: dx - 62, y: H - 26, width: 124, height: 22, rx: 11, fill: "var(--ch-line)" }));
+    svg.appendChild(el("text", { x: dx, y: H - 11, fill: "var(--ch-line-ink)", "font-size": 11, "font-weight": 700, "text-anchor": "middle", "font-family": "inherit" }, "Data date " + lbl));
     gantt.appendChild(svg);
   }
 
@@ -140,21 +144,21 @@
     s.appendChild(el("title", { id: "sc-t" }, "Sample S-curve: planned versus actual progress (illustrative data)"));
     s.appendChild(el("desc", { id: "sc-d" }, "Illustrative data only. Planned progress reaches 58 percent at the data date, actual progress is 50 percent, and the forecast finish is two weeks late."));
     [0, 25, 50, 75, 100].forEach(function (v) {
-      s.appendChild(el("line", { x1: L, x2: WW - R, y1: py(v), y2: py(v), stroke: "#d9e1e8" }));
+      s.appendChild(el("line", { x1: L, x2: WW - R, y1: py(v), y2: py(v), stroke: "var(--ch-grid)" }));
       s.appendChild(el("text", { x: L - 6, y: py(v) + 4, "text-anchor": "end", class: "g-small" }, v + "%"));
     });
     for (var w = 0; w <= 22; w += 2) s.appendChild(el("text", { x: px(w), y: HH - 16, "text-anchor": "middle", class: "g-small" }, "W" + w));
     function path(arr, from) { return arr.map(function (v, i) { return (i === 0 && !from ? "M" : (i === 0 ? "M" : "L")) + px(i + (from || 0)) + " " + py(v); }).join(" "); }
-    s.appendChild(el("path", { d: path(planned), fill: "none", stroke: "#1A7C8F", "stroke-width": 3 }));
-    s.appendChild(el("path", { d: path(actual), fill: "none", stroke: "#C23B3B", "stroke-width": 3 }));
+    s.appendChild(el("path", { d: path(planned), fill: "none", stroke: "var(--ch-teal)", "stroke-width": 3 }));
+    s.appendChild(el("path", { d: path(actual), fill: "none", stroke: "var(--ch-red)", "stroke-width": 3 }));
     var fc = [50, 56, 63, 70, 77, 84, 90, 95, 98, 100];
-    s.appendChild(el("path", { d: path(fc, ddw), fill: "none", stroke: "#C23B3B", "stroke-width": 2, "stroke-dasharray": "6 5" }));
-    s.appendChild(el("line", { x1: px(ddw), x2: px(ddw), y1: T, y2: HH - B, stroke: "#1B2A3B", "stroke-dasharray": "5 4", "stroke-width": 2 }));
+    s.appendChild(el("path", { d: path(fc, ddw), fill: "none", stroke: "var(--ch-red)", "stroke-width": 2, "stroke-dasharray": "6 5" }));
+    s.appendChild(el("line", { x1: px(ddw), x2: px(ddw), y1: T, y2: HH - B, stroke: "var(--ch-line)", "stroke-dasharray": "5 4", "stroke-width": 2 }));
     s.appendChild(el("text", { x: px(ddw) - 6, y: T + 12, "text-anchor": "end", class: "g-small", "font-weight": 700 }, "Data date"));
     // hover / touch / keyboard read-out (sample data)
-    var cross = el("line", { y1: T, y2: HH - B, stroke: "#1B2A3B", "stroke-width": 1.5, opacity: 0 });
-    var dotP = el("circle", { r: 5, fill: "#1A7C8F", stroke: "#fff", "stroke-width": 2, opacity: 0 });
-    var dotA = el("circle", { r: 5, fill: "#C23B3B", stroke: "#fff", "stroke-width": 2, opacity: 0 });
+    var cross = el("line", { y1: T, y2: HH - B, stroke: "var(--ch-line)", "stroke-width": 1.5, opacity: 0 });
+    var dotP = el("circle", { r: 5, fill: "var(--ch-teal)", stroke: "var(--ch-surface)", "stroke-width": 2, opacity: 0 });
+    var dotA = el("circle", { r: 5, fill: "var(--ch-red)", stroke: "var(--ch-surface)", "stroke-width": 2, opacity: 0 });
     s.appendChild(cross); s.appendChild(dotP); s.appendChild(dotA);
     var hitr = el("rect", { x: L, y: T, width: WW - L - R, height: HH - T - B, fill: "transparent" });
     s.appendChild(hitr);
@@ -365,6 +369,19 @@
     if (m) { var card = gal.querySelector('[data-id="' + m[1] + '"]'); open(m[1], card); }
   }
 
+  /* ---------- Mobile menu ---------- */
+  var navBtn = document.getElementById("nav-toggle"), navBox = document.getElementById("site-nav");
+  if (navBtn && navBox) {
+    var setNav = function (open) {
+      navBox.classList.toggle("open", open);
+      navBtn.setAttribute("aria-expanded", open ? "true" : "false");
+      navBtn.textContent = open ? "Close" : "Menu";
+    };
+    navBtn.addEventListener("click", function () { setNav(!navBox.classList.contains("open")); });
+    navBox.addEventListener("click", function (e) { if (e.target.closest("a")) setNav(false); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && navBox.classList.contains("open")) { setNav(false); navBtn.focus(); } });
+  }
+
   /* ---------- Hero slideshow ---------- */
   var reduceM = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var slides = document.querySelectorAll("#slides img");
@@ -411,7 +428,7 @@
     }
     requestAnimationFrame(step);
   }
-  var isPdf = /[?&]pdf/.test(location.search);
+  var isPdf = /[?&]pdf\b/.test(location.search);
   function finalizeAll() { Array.prototype.forEach.call(counters, function (n) { var to = n.getAttribute("data-count"); if (to !== null) n.textContent = to; }); }
   window.addEventListener("beforeprint", finalizeAll);
   if (isPdf) {

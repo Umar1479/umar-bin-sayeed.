@@ -19,9 +19,9 @@ for p in P:
     cards.append(f'''<button type="button" class="proj" data-id="{p['id']}" data-sector="{html.escape(p['sector'])}" aria-haspopup="dialog" aria-label="Open {html.escape(p['name'])}: {n} photo{'s' if n != 1 else ''}">
   <span class="ph-wrap"><img src="{f}" width="{w}" height="{h}" loading="lazy" alt="{html.escape(p['name'])}: project photograph"><span class="count">{n} photo{'s' if n != 1 else ''}</span></span>
   <span class="b"><span class="sector">{html.escape(p['sector'])}</span><span class="t">{html.escape(p['name'])}</span>
-  <span class="scope">{html.escape(' · '.join(p['scope']))} · {html.escape(p['location'])}</span>
+  <span class="scope">{html.escape(', '.join(p['scope']))}. {html.escape(p['location'])}.</span>
   {'<span class="role"><b>Planning &amp; controls:</b> Umar Bin Sayeed, Lead Planning Engineer</span>' if p.get('role') else ''}
-  <span class="more">View project →</span></span></button>''')
+  <span class="more">View project</span></span></button>''')
 STRIP_IDS = ["01", "02", "03", "04", "06", "12", "14", "17", "18", "24", "27", "28"]
 byid = {p["id"]: p for p in P}
 def tile(p, hidden):
