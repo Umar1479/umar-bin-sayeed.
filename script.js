@@ -105,18 +105,20 @@
       svg.appendChild(el("text", { x: mx + 14 * m.side, y: cy + 4, class: "g-small", "text-anchor": m.side < 0 ? "end" : "start" }, m.t));
     });
 
-    // results lane (numbered; key is listed under the chart; not date-scaled)
+    // results lane: numbered, key is listed under the chart. The CV gives only the span (start date at Motive to today), so
+    // the span is drawn as a bar and each result sits inside it without a date of its own.
     var ay = my + rowH;
     svg.appendChild(el("text", { x: 12, y: ay + 22, class: "g-text", "font-weight": 700 }, "Motive results"));
-    svg.appendChild(el("text", { x: 12, y: ay + 38, class: "g-small" }, "Not date-scaled [dates TBC]"));
+    svg.appendChild(el("text", { x: 12, y: ay + 38, class: "g-small" }, "Achieved Jan 2024 to present"));
     var mS = x(new Date(2024, 0, 1)), mE = x(dd);
+    svg.appendChild(el("rect", { x: mS, y: ay + 18, width: mE - mS, height: 12, rx: 6, fill: "var(--gold)", opacity: 0.22 }));
     RESULTS.forEach(function (txt, i) {
       var ax = mS + (mE - mS) * (i + 0.5) / 4, cy = ay + 24;
       var g = el("g", { "aria-label": "Result " + (i + 1) + ": " + txt });
       g.appendChild(el("title", {}, txt));
       g.appendChild(el("path", { d: "M" + ax + " " + (cy - 13) + " l13 13 l-13 13 l-13 -13 z", fill: "var(--ch-surface)", stroke: "var(--ch-ring)", "stroke-width": 2 }));
       g.appendChild(el("text", { x: ax, y: cy + 4, "text-anchor": "middle", "font-size": 12, "font-weight": 700, fill: "var(--ch-text)", "font-family": "inherit" }, String(i + 1)));
-      hit(g, function () { showDetail("Result " + (i + 1) + " at Motive", "Date not stated in the CV", [txt]); });
+      hit(g, function () { showDetail("Result " + (i + 1) + " at Motive", "Achieved at Motive, Jan 2024 to present", [txt]); });
     });
 
     // data date

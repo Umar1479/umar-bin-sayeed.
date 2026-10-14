@@ -3,7 +3,7 @@
 ## Visible [PLACEHOLDER] / [CONFIRM] tags on the page
 1. **Vercel URL**: set to https://umar-bin-sayeed.vercel.app/ (share tags, QR code, PDF). Done.
 2. **Growing with Motive**: done. The "Since joining" card now says what you own at Motive, using only CV facts. The CV shows one Motive role, no promotions, so none is claimed.
-3. **Motive results lane (Gantt)**: dates for the four results are not in the CV, so they are shown numbered and not date-scaled.
+3. **Motive results lane (Gantt)**: the CV gives no date for each result, so the four are numbered and shown inside one span, "Achieved Jan 2024 to present" (your start date at Motive to today). Add an exact month and year per result if you want each placed on its own date.
 4. **Your name on projects (please check):** every project popup and card says "Umar Bin Sayeed, Lead Planning Engineer", as you asked for all projects since you joined in January 2024. The Company Profile gives no project dates, so I cannot check this. Any project that finished before Jan 2024 should be switched off: open `data/projects.json`, set `"role": false` for it, then run `python tools/build_gallery.py`.
 5. **PepsiCo** photos are design visuals, not site photos.
 
@@ -35,5 +35,5 @@
 
 ## v3: dark look, slideshow, map, charts, PDF
 - **Hero slideshow, photo strip, map:** all use photos and city names from the Company Profile. The map is a simplified outline with pins for Riyadh (30), Khobar (1), Yanbu (1) and NEOM (1). Patchi Villaggio is in Khobar and Patchi Yanbu is in Yanbu, as the profile states.
-- **Page PDF:** `assets/Umar-Bin-Sayeed-Motive-Page.pdf` (11 pages, about 0.7 MB). It is a snapshot of the page's print layout, with the first 12 projects. It contains the QR code and the remaining visible note (Gantt result dates). **Regenerate it after you change the page :** `python tools/make_pdf.py` (needs Chrome or Edge; `pip install PyMuPDF` shrinks the images).
+- **Page PDF:** `assets/Umar-Bin-Sayeed-Motive-Page.pdf` (11 pages, about 0.7 MB). It is a snapshot of the page's print layout, with the first 12 projects. It contains the QR code and the Gantt results span note. **Regenerate it after you change the page :** `python tools/make_pdf.py` (needs Chrome or Edge; `pip install PyMuPDF` shrinks the images).
 - Chart read-outs and role details use only CV facts and the labelled sample data.
