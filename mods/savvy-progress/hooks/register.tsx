@@ -9,7 +9,7 @@ const steps = atom({ plugin: 'savvy-progress', key: 'steps' } as const, [], {
 })
 
 const todos = atom({ plugin: 'savvy-progress', key: 'todos' } as const, [], {
-  shape: 'todos-1',
+  shape: 'todos-2',
 })
 const startedAt = atom(
   { plugin: 'savvy-progress', key: 'startedAt' } as const,
@@ -53,6 +53,42 @@ export const register: Register = on => {
     )
 
     return next(e)
+  })
+
+  on('tool.call', { tool: 'TaskCreate' }, async ($, e, next) => {
+    const ran = await next(e)
+    const result = ran.deny === undefined ? ran.result : undefined
+    const task = (result as { task?: { id: string; subject: string } } | undefined)?.task
+    if (task) {
+      await update($, todos, list => [
+        ...list,
+        { id: task.id, content: task.subject, status: 'pending' as const },
+      ])
+    }
+
+    return ran
+  })
+
+  on('tool.call', { tool: 'TaskUpdate' }, async ($, e, next) => {
+    const ran = await next(e)
+    if (ran.deny === undefined && ran.isError !== true) {
+      const status = e.status === 'deleted' ? undefined : e.status
+      await update($, todos, list =>
+        e.status === 'deleted'
+          ? list.filter(t => t.id !== e.taskId)
+          : list.map((t): Todo =>
+              t.id === e.taskId
+                ? {
+                    ...t,
+                    content: e.subject ?? t.content,
+                    status: status ?? t.status,
+                  }
+                : t,
+            ),
+      )
+    }
+
+    return ran
   })
 
   on('tool.call', async ($, e, next) => {
