@@ -1,4 +1,4 @@
-export type Step = { id: string; tool: string; isDone: boolean }
+export type Step = { id: string; tool: string; agentId?: string; isDone: boolean }
 
 export type Todo = { id?: string; content: string; status: 'pending' | 'in_progress' | 'completed' }
 
