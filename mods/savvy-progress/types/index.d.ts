@@ -1,6 +1,6 @@
-export type Step = { id: string; tool: string; isDone: boolean }
+export type Step = { id: string; tool: string; agentId?: string; isDone: boolean }
 
-export type Todo = { content: string; status: 'pending' | 'in_progress' | 'completed' }
+export type Todo = { id?: string; content: string; status: 'pending' | 'in_progress' | 'completed' }
 
 declare module 'claude-code' {
   interface PluginState {
